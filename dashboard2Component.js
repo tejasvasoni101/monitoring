@@ -6,7 +6,7 @@ function fetchDataAndUpdateTable() {
     $("#updateTime").text("Updating...");
   
     // Fetch data from API
-    $.get("http://stockalgoapp-env.eba-4sqye4mb.ap-south-1.elasticbeanstalk.com/findStock?all=1", function(data) {
+    $.get("https://stockalgoapp-env.eba-4sqye4mb.ap-south-1.elasticbeanstalk.com/findStock?all=1", function(data) {
       const timestamp = new Date().toLocaleString();
   
       // Store data in local storage with timestamp
