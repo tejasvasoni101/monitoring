@@ -9,7 +9,7 @@ function fetchAndDisplayStockData() {
   tableContainer.empty(); // Clear previous data if any
 
  // Fetch all data from API
- $.get("http://stockalgoapp-env.eba-4sqye4mb.ap-south-1.elasticbeanstalk.com/getDwh", function(data) {
+ $.get("https://stockalgoapp-env.eba-4sqye4mb.ap-south-1.elasticbeanstalk.com/getDwh", function(data) {
   // Sort data based on net earnings in ascending order
   data.sort((a, b) => a.netLifetimeEarnings - b.netLifetimeEarnings);
 
@@ -81,7 +81,7 @@ function editRow(row, budgetCell, isRemovedCell) {
 
       // Make API call to update data
       $.ajax({
-        url: "http://stockalgoapp-env.eba-4sqye4mb.ap-south-1.elasticbeanstalk.com/Dwh",
+        url: "https://stockalgoapp-env.eba-4sqye4mb.ap-south-1.elasticbeanstalk.com/Dwh",
         type: "POST",
         contentType: "application/json",
         data: JSON.stringify({ stockId, budget, isRemoved }),
@@ -114,7 +114,7 @@ function updateRow(stockName, row) {
 
   // Make API call to update data
   $.ajax({
-    url: "http://stockalgoapp-env.eba-4sqye4mb.ap-south-1.elasticbeanstalk.com/Dwh",
+    url: "https://stockalgoapp-env.eba-4sqye4mb.ap-south-1.elasticbeanstalk.com/Dwh",
     type: "POST",
     contentType: "application/json",
     data: JSON.stringify({ stockId, budget, isRemoved }),
